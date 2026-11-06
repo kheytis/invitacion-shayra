@@ -1,0 +1,543 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis XV años</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<audio id="musicaFondo" loop>
+    <source src="audio/musica.mpeg" type="audio/mpeg">
+</audio>
+
+<!-- PANTALLA DE BIENVENIDA -->
+<div class="pantalla-bienvenida" id="pantallaBienvenida">
+
+    <div class="bienvenida-glass">
+
+        <p class="bienvenida-subtitulo">Una noche especial</p>
+
+        <h2>Mis XV años</h2>
+
+        <p class="bienvenida-texto">
+            Tengo una invitación especial para:
+        </p>
+
+        <!-- DATOS DEL INVITADO -->
+        <h3 id="nombreInvitado" class="nombre-invitado"></h3>
+
+        <p id="cuposInvitado" class="cupos-invitado"></p>
+
+        <!-- IMAGEN PARA ABRIR LA INVITACIÓN -->
+        <button class="boton-abrir" onclick="entrarInvitacion()">
+            <img src="Img/abrir-invitacion.png" alt="Abrir invitación">
+        </button>
+
+        <p class="texto-abrir">Toca para abrir</p>
+
+    </div>
+
+</div>
+
+<main class="pagina">
+    
+
+    <!-- PRIMERA SECCIÓN -->
+    <section class="tarjeta">
+
+  <!-- Video horizontal: se conserva para computador -->
+  <video class="video-fondo" id="videoInicio" autoplay muted playsinline>
+    <source src="videos/fondo.mp4" type="video/mp4">
+  </video>
+
+  <!-- imagen vertical: se mostrará solamente en teléfono -->
+  <img class="imagen-portada-movil" src="Img/portada2.png" alt="Portada de los XV años de Shayra">
+
+  <img src="Img/mis-quince.PNG" alt="Mis quince" class="letrero-quince">
+
+</section>
+
+    <!-- SEGUNDA SECCIÓN -->
+    <section class="segunda-seccion">
+        <video class="video-fondo-movil" autoplay muted playsinline loop>
+    <source src="Videos/InicioMovil.mp4" type="video/mp4">
+</video>
+ <div class="retrato">
+        <video id="videoRetrato" muted playsinline preload="auto">
+            <source src="Videos/Retrato2.webm" type="video/webm">
+        </video>
+    </div>
+   
+        <div class="palabras">
+
+            <p class="subtitulo">Un momento especial</p>
+
+            <h2>Mis XV años</h2>
+
+            <p class="mensaje">
+                Hoy comienza una nueva etapa de mi vida,
+                llena de sueños, ilusiones y momentos
+                inolvidables.
+
+                Quiero compartir contigo esta noche tan
+                especial, porque tu presencia hará que
+                este día sea aún más maravilloso.
+            </p>
+
+            <p class="firma">Con cariño, Shayra</p>
+
+        </div>
+
+        <!-- MARCO DE LAS CUATRO ESQUINAS -->
+        <img src="img/marco-esquina.png" class="esquina superior-izquierda" alt="">
+        <img src="img/marco-esquina.png" class="esquina superior-derecha" alt="">
+        <img src="img/marco-esquina.png" class="esquina inferior-izquierda" alt="">
+        <img src="img/marco-esquina.png" class="esquina inferior-derecha" alt="">
+
+    </section>
+
+
+    
+<!-- TERCERA SECCIÓN: INFORMACIÓN GENERAL -->
+<section class="informacion">
+
+    <p class="info-subtitulo">Un día para recordar</p>
+
+    <h2 class="info-titulo">Información general</h2>
+
+    <!-- CARRUSEL -->
+    <div class="carrusel-contenedor">
+
+        <button class="flecha-carrusel" id="anterior" aria-label="Tarjeta anterior">
+            &#10094;
+        </button>
+
+        <div class="tarjetas-info" id="tarjetasInfo">
+
+          <!-- LUGAR -->
+<article
+    class="info-card tarjeta-lugar"
+    onclick="window.open('https://maps.app.goo.gl/1LdHSY3H32uapbmK9', '_blank')"
+    role="link"
+    tabindex="0"
+    aria-label="Abrir ubicación en Google Maps"
+    onkeydown="if(event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        window.open('https://maps.app.goo.gl/1LdHSY3H32uapbmK9', '_blank');
+    }"
+>
+    <img src="Img/Lugar.jpeg" alt="Lugar de celebración">
+
+    <div class="contenido-card">
+        <h3>El lugar</h3>
+        <p>Te esperamos para celebrar juntos esta noche especial.</p>
+        <p>!Has click aqui!</p>
+        <p><strong>Hora:</strong><br>4:00 pm</p>
+    </div>
+</article>
+
+
+            <!-- DRESS CODE -->
+            <article class="info-card">
+
+                <img src="Img/dresscode.jpeg" alt="Vestimenta elegante">
+
+                <div class="contenido-card">
+                   
+
+                    <h3>Dress code</h3>
+
+
+                    <p>
+                        <strong>Vestimenta:</strong><br>
+                        Formal / Elegante
+                    </p>
+
+                    <p>¡Luce tu mejor estilo!</p>
+
+                    
+                </div>
+
+            </article>
+
+            <!-- COLOR RESERVADO -->
+            <article class="info-card">
+
+                <img src="Img/Color.png" alt="Color champagne">
+
+                <div class="contenido-card">
+                   
+
+                    <h3>Color reservado</h3>
+
+                    <p>
+                        El color champagne está reservado
+                        para la quinceañera.
+                    </p>
+
+                    <p>
+                        Te esperamos con un atuendo elegante.
+                    </p>
+                </div>
+
+            </article>
+
+<!-- REGALOS -->
+<article class="info-card">
+
+    <img src="Img/regalos.jpeg" alt="Regalos">
+
+    <div class="contenido-card">
+
+    
+        <h3>Regalos</h3>
+
+        <p>
+            Tu presencia es el mejor regalo
+            que puedes darme.
+        </p>
+
+        <p>
+            Si deseas tener un detalle especial,
+            tendremos lluvia de sobres.
+        </p>
+
+    </div>
+
+</article>
+
+            <!-- FECHA Y HORA -->
+            <article class="info-card">
+
+                <img src="Img/Fecha.jpeg" alt="Fecha de celebración">
+
+                <div class="contenido-card">
+                  
+
+                    <h3>Fecha y hora</h3>
+
+                    
+
+                    <p>
+                        <strong>20 de noviembre</strong><br>
+                        <strong>4:00 p. m.</strong>
+                    </p>
+                </div>
+
+            </article>
+
+        </div>
+
+        <button class="flecha-carrusel" id="siguiente" aria-label="Tarjeta siguiente">
+            &#10095;
+        </button>
+
+    </div>
+
+    <div class="indicadores-carrusel" id="indicadoresTarjetas">
+    <span class="activo"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+
+    <!-- CUENTA REGRESIVA -->
+    <div class="cuenta-regresiva">
+
+        <p class="contador-subtitulo">
+            La espera está por terminar
+        </p>
+
+        <h2>Faltan...</h2>
+
+        <div class="contador">
+
+            <div class="contador-item">
+                <span id="dias">00</span>
+                <small>Días</small>
+            </div>
+
+            <div class="contador-item">
+                <span id="horas">00</span>
+                <small>Horas</small>
+            </div>
+
+            <div class="contador-item">
+                <span id="minutos">00</span>
+                <small>Minutos</small>
+            </div>
+
+            <div class="contador-item">
+                <span id="segundos">00</span>
+                <small>Segundos</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- JAVASCRIPT -->
+<script>
+// LISTA DE INVITADOS Y SUS CÓDIGOS
+const invitados = {
+    "K7P2Q9": { nombre: "Ana Benavidez", cupos: 1 },
+    "L4M8R2": { nombre: "Lia Parra", cupos: 1 },
+    "B9T3W6": { nombre: "Rosalba Maquilon", cupos: 2 },
+    "C5N2X8": { nombre: "Isabella y Salomé", cupos: 3 },
+    "F6D1J4": { nombre: "Tails Silba", cupos: 1 },
+    "H8Q3P5": { nombre: "Isary Agamez", cupos: 1 },
+    "R2V7K9": { nombre: "Familia Brunal Rojas", cupos: 2 },
+    "M5L1Z8": { nombre: "Familia Bello Rojas", cupos: 4 },
+    "W3A9N6": { nombre: "Familia Rojas Palomino", cupos: 2 },
+    "J4X8C2": { nombre: "Familia Villegas Mendoza", cupos: 4 },
+    "P7B2F5": { nombre: "Juan S. Mareño", cupos: 2 },
+    "D9K6R3": { nombre: "Carola y López", cupos: 1 },
+    "N2H5W8": { nombre: "Familia Varela Hernández", cupos: 3 },
+    "X6M3Q1": { nombre: "Familia Alvis Giraldo", cupos: 3 },
+    "A8P4T7": { nombre: "Familia Ortega Hernández", cupos: 2 },
+    "V1C9L5": { nombre: "Desiret Valdés", cupos: 1 },
+    "Q3R7B2": { nombre: "Sandy Cadena", cupos: 1 },
+    "Z5J2N8": { nombre: "Olga Chaverra", cupos: 1 },
+    "G4W9D1": { nombre: "Lorena de la Hoz", cupos: 1 },
+    "T8F3M6": { nombre: "Esteban Rodríguez", cupos: 1 },
+    "Y2L7K4": { nombre: "Yeison Tamayo", cupos: 1 },
+    "E9N5P3": { nombre: "Joseph Morelo", cupos: 1 },
+    "U6B1X8": { nombre: "Familia Doria Camargo", cupos: 2 },
+    "S3H8V5": { nombre: "Ruby y Nicole", cupos: 2 }
+};
+
+// IDENTIFICAR AL INVITADO POR SU CÓDIGO
+const parametros = new URLSearchParams(window.location.search);
+const codigo = parametros.get("i");
+
+const invitado = invitados[codigo];
+
+if (invitado) {
+    document.getElementById("nombreInvitado").textContent = invitado.nombre;
+
+    document.getElementById("cuposInvitado").textContent =
+        invitado.cupos === 1
+        ? "Tienes asignado 1 cupo"
+        : `Tienes asignados ${invitado.cupos} cupos`;
+} else {
+    document.getElementById("nombreInvitado").textContent = "Invitado especial";
+    document.getElementById("cuposInvitado").textContent =
+        "Te esperamos para celebrar juntos";
+}
+    // CUENTA REGRESIVA
+    const fechaEvento = new Date("2026-11-20T16:00:00").getTime();
+
+    function actualizarContador() {
+
+        const ahora = new Date().getTime();
+        const diferencia = fechaEvento - ahora;
+
+        if (diferencia <= 0) {
+
+            document.querySelector(".contador").innerHTML =
+                "¡Llegó el gran día!";
+
+            return;
+        }
+
+        const dias = Math.floor(
+            diferencia / (1000 * 60 * 60 * 24)
+        );
+
+        const horas = Math.floor(
+            (diferencia / (1000 * 60 * 60)) % 24
+        );
+
+        const minutos = Math.floor(
+            (diferencia / (1000 * 60)) % 60
+        );
+
+        const segundos = Math.floor(
+            (diferencia / 1000) % 60
+        );
+
+        document.getElementById("dias").textContent =
+            String(dias).padStart(2, "0");
+
+        document.getElementById("horas").textContent =
+            String(horas).padStart(2, "0");
+
+        document.getElementById("minutos").textContent =
+            String(minutos).padStart(2, "0");
+
+        document.getElementById("segundos").textContent =
+            String(segundos).padStart(2, "0");
+
+    }
+
+    actualizarContador();
+    setInterval(actualizarContador, 1000);
+
+
+    // VIDEO DE INICIO
+    const videoInicio = document.getElementById("videoInicio");
+
+    videoInicio.addEventListener("mouseenter", function() {
+        videoInicio.currentTime = 0;
+        videoInicio.play();
+    });
+
+
+    // VIDEO RETRATO
+const videoRetrato = document.getElementById("videoRetrato");
+
+if (videoRetrato) {
+
+    // COMPUTADOR: reproducir al pasar el cursor
+    videoRetrato.addEventListener("mouseenter", function() {
+        videoRetrato.currentTime = 0;
+        videoRetrato.play();
+    });
+
+    videoRetrato.addEventListener("mouseleave", function() {
+        videoRetrato.pause();
+        videoRetrato.currentTime = 0;
+    });
+
+    // CELULAR: reproducir cuando el video aparece en pantalla
+    const observadorRetrato = new IntersectionObserver((entradas) => {
+
+        entradas.forEach((entrada) => {
+
+            if (entrada.isIntersecting) {
+                videoRetrato.play().catch(error => {
+                    console.log("No se pudo reproducir el video:", error);
+                });
+            } else {
+                videoRetrato.pause();
+                videoRetrato.currentTime = 0;
+            }
+
+        });
+
+    }, { threshold: 0.4 });
+
+    observadorRetrato.observe(videoRetrato);
+}
+    // ENTRAR A LA INVITACIÓN Y REPRODUCIR MÚSICA
+    function entrarInvitacion() {
+
+        const musica = document.getElementById("musicaFondo");
+
+        musica.play();
+
+        document.getElementById("bienvenida").classList.add("oculta");
+
+    }
+
+
+    // CARRUSEL DE TARJETAS
+    const tarjetas = document.querySelectorAll(
+        "#tarjetasInfo .info-card"
+    );
+
+    const indicadores = document.querySelectorAll(
+        "#indicadoresTarjetas span"
+    );
+
+    let tarjetaActual = 0;
+
+    function mostrarTarjeta(indice) {
+
+        tarjetas.forEach((tarjeta, i) => {
+
+            tarjeta.classList.remove(
+                "activa",
+                "izquierda",
+                "derecha",
+                "oculta"
+            );
+
+            if (i === indice) {
+
+                tarjeta.classList.add("activa");
+
+            } else if (
+                i === (indice - 1 + tarjetas.length) % tarjetas.length
+            ) {
+
+                tarjeta.classList.add("izquierda");
+
+            } else if (
+                i === (indice + 1) % tarjetas.length
+            ) {
+
+                tarjeta.classList.add("derecha");
+
+            } else {
+
+                tarjeta.classList.add("oculta");
+
+            }
+
+        });
+
+        indicadores.forEach((indicador, i) => {
+
+            indicador.classList.toggle(
+                "activo",
+                i === indice
+            );
+
+        });
+
+    }
+
+
+    // FLECHA SIGUIENTE
+    document.getElementById("siguiente").addEventListener("click", () => {
+
+        tarjetaActual = (tarjetaActual + 1) % tarjetas.length;
+
+        mostrarTarjeta(tarjetaActual);
+
+    });
+
+
+    // FLECHA ANTERIOR
+    document.getElementById("anterior").addEventListener("click", () => {
+
+        tarjetaActual = (tarjetaActual - 1 + tarjetas.length) % tarjetas.length;
+
+        mostrarTarjeta(tarjetaActual);
+
+    });
+
+
+    // MOSTRAR PRIMERA TARJETA
+    mostrarTarjeta(tarjetaActual);
+    
+
+</script>
+<script>
+    function entrarInvitacion() {
+        document.getElementById("pantallaBienvenida").classList.add("oculta");
+
+        const musica = document.getElementById("musicaFondo");
+
+        if (musica) {
+            musica.play();
+        }
+    }
+</script>
+
+
+</body>
+</html>
